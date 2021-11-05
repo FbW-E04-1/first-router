@@ -9,14 +9,14 @@ const Nav = () => {
           <NavLink
             className='different'
             to='/'
-            exact
-            activeStyle={{ color: 'green', textDecoration: 'underline' }}>
+            exact='true'
+            activestyle={{ color: 'green', textDecoration: 'underline' }}>
             <li>Home</li>
           </NavLink>
-          <NavLink to='/about' activeStyle={{ color: 'green' }}>
+          <NavLink to='/about' activestyle={{ color: 'green' }}>
             <li>About</li>
           </NavLink>
-          <NavLink to='/products' activeClassName='red'>
+          <NavLink to='/products' activeclassname='red'>
             <li>Products</li>
           </NavLink>
         </ul>

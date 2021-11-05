@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { useHistory, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import useFetch from '../../customHooks/useFetch';
 
 const ProductDetail = () => {
   const { id } = useParams();
-  const history = useHistory();
+  const history = useNavigate();
 
   const url = `https://jsonplaceholder.typicode.com/photos/${id}`;
   const initialState = { results: {}, loading: true, error: '' };
@@ -25,7 +25,7 @@ const ProductDetail = () => {
     <section className='details'>
       <p>{results.title}</p>
       <img src={results.thumbnailUrl} alt={results.title} />
-      <button onClick={() => history.goBack()}>Return</button>
+      <button onClick={() => history('/products')}>Return</button>
     </section>
   );
 };
